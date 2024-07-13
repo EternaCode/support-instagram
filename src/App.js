@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Container, Button } from '@mui/material';
-import Adsense from './Adsense';
 import LineBreaker from './LineBreaker';
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
             </AppBar>
             <Container>
                 {activePage === 'newline' && <LineBreaker />}
-                <Adsense />
             </Container>
         </div>
     );
