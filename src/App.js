@@ -16,7 +16,7 @@ function App() {
                     <Typography variant="h6" style={{ flexGrow: 1 }}>
                         HELPER.INSTAGRAM
                     </Typography>
-                    <Button color="inherit" onClick={() => handleMenuClick('newline')}>개행</Button>
+                    <Button color="inherit" onClick={() => handleMenuClick('newline')}>First Line Breaker</Button>
                 </Toolbar>
             </AppBar>
             <Container>
