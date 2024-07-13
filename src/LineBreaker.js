@@ -54,7 +54,7 @@ const LineBreaker = () => {
                 <meta property="og:title" content="Instagram Line Breaker - First Line Break for Instagram Captions" />
                 <meta property="og:description" content="Easily add line breaks to your Instagram captions with our Instagram Line Breaker tool. Perfect for creating aesthetically pleasing and readable Instagram posts." />
                 <meta property="og:image" content="URL to an image representing your site" />
-                <meta property="og:url" content="https://support-instagram.github.io" />
+                <meta property="og:url" content="https://helper-instagram.github.io" />
                 <meta property="og:type" content="website" />
                 
                 <meta name="twitter:card" content="summary_large_image" />

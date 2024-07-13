@@ -15,7 +15,7 @@ function App() {
             <AppBar position="static">
                 <Toolbar>
                     <Typography variant="h6" style={{ flexGrow: 1 }}>
-                        SUPPORT.INSTAGRAM
+                        HELPER.INSTAGRAM
                     </Typography>
                     <Button color="inherit" onClick={() => handleMenuClick('newline')}>개행</Button>
                 </Toolbar>
