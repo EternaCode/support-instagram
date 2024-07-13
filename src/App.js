@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { AppBar, Toolbar, Typography, Container, Button } from '@mui/material';
+import Adsense from './Adsense';
+import LineBreaker from './LineBreaker';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [activePage, setActivePage] = useState('newline');
+
+    const handleMenuClick = (page) => {
+        setActivePage(page);
+    };
+
+    return (
+        <div>
+            <AppBar position="static">
+                <Toolbar>
+                    <Typography variant="h6" style={{ flexGrow: 1 }}>
+                        SUPPORT.INSTAGRAM
+                    </Typography>
+                    <Button color="inherit" onClick={() => handleMenuClick('newline')}>개행</Button>
+                </Toolbar>
+            </AppBar>
+            <Container>
+                {activePage === 'newline' && <LineBreaker />}
+                <Adsense />
+            </Container>
+        </div>
+    );
 }
 
 export default App;
