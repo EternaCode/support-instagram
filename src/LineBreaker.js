@@ -62,20 +62,41 @@ const LineBreaker = () => {
                 <meta name="twitter:description" content="Easily add line breaks to your Instagram captions with our Instagram Line Breaker tool. Perfect for creating aesthetically pleasing and readable Instagram posts." />
                 <meta name="twitter:image" content="URL to an image representing your site" />
             </Helmet>
-            <Box className="textarea-section" sx={{ mb: 2 }}>
+            <Box className="textarea-section" sx={{ mb: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Typography variant="h5" gutterBottom>
-                    First Line Break for Instagram Captions
+                    First Line Break for Instagram
                 </Typography>
-                <TextField
-                    id="textarea"
-                    variant="outlined"
-                    fullWidth
-                    multiline
-                    rows={10}
-                    value={text}
-                    onChange={handleChange}
-                    sx={{ mb: 2 }}
-                />
+                <Box sx={{ width: '100%', maxWidth: 600, border: '1px solid #ddd', borderRadius: 2, overflow: 'hidden', mb: 2 }}>
+                    <p style={{
+                        position:'absolute',
+                        fontWeight:'bold',
+                        display:'inline-block',
+                        paddingLeft: '28px',
+                    }}>
+                        username
+                    </p>
+                    <TextField
+                        id="textarea"
+                        variant="outlined"
+                        fullWidth
+                        multiline
+                        rows={10}
+                        value={text}
+                        onChange={handleChange}
+                        sx={{
+                            mb: 0,
+                            '& textarea': {
+                                padding: 2,
+                                paddingTop: 3,
+                                backgroundColor:'transparent',
+                                fontSize: '14px',
+                                lineHeight: '1.5',
+                                whiteSpace: 'pre-wrap',
+                                wordBreak: 'break-word',
+                            }
+                        }}
+                    />
+                </Box>
                 <Button variant="contained" color="primary" onClick={handleCopy} sx={{ mb: 2 }}>
                     Copy to Clipboard
                 </Button>
